@@ -12,3 +12,4 @@ Some material to tell my colleagues
 8. rxpy
 9. databases/orm
 10. testing
+11. Design patterns, clean code
