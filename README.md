@@ -9,3 +9,6 @@ Some material to tell my colleagues
 5. docker
 6. cryptography
 7. networking
+8. rxpy
+9. databases/orm
+10. testing
