@@ -2,7 +2,7 @@
 Some material to tell my colleagues
 
 ## Syllabus
-1. shell
+1. UNIX shell
 2. git
 3. linux
 4. vim and ctags

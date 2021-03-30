@@ -72,6 +72,32 @@ You can also merge input or output streams with `n <& m` or `n >& m`.
 Normally the STDIN is 0, STDOUT is 1 and STDERR is 2.
 
 ### Configure shell
+There are different bash configuration files in linux.
+- `/etc/profile` system-wide initialization file executed during login
+- `/etc/bash.bashrc` system-wide initialization file executed for each bash shell launched
+- if `~/.bash_profile` or `~/.bash_login` file exists it is executed after `/etc/profile` during login, otherwise the `~/.profile` is executed
+- `~/.bashrc` this file is executed when interactive shell starts
+- `~/.bash_logout` is executed during logout
+
+There are environment variables that can be accessed via your shell or the programs you run through shell. To see all available evironment variables do `env`.
+For example if you do `env | grep USER` you'll see your log in user name.
+You can print the values of your environment variables as well `echo $USER`
+
+You can add enviornment variables by exporting them `export $MY_VAR=42`.
+
+The variable that shows your user's folder is `HOME` and when you type `cd ~` it looks to `HOME` to know the home folder path.
+
+When you type any program to run from shell it needs a way to find the program. 
+All the executable directories are stored in `PATH` variable. To see the content of your path `echo $PATH`.
+You can see that it's a string in `path_1:path_2:path_3:...:path_n` format. When you type the executable name (e.g. `ls`) to run it searches in `path_1` directory (e.g. `/bin`). If executable exists it's executed, otherwise the `path_2` (e.g. `/usr/bin`) is searched.
+
+When you install new software and want to run it from shell, you need to add it's binary's directory to `PATH`. `export PATH=$PATH:/path/to/new/binaries`.
+For example you installed the miniconda and want to use it's python instead of linux's python you need to prepend the minconda python path to `PATH`.
+`export $PATH=$HOME/miniconda3/bin`
+
+When you open new terminal, you'll see that the variables you have set disappeared. To make changes permanent you need to write them in `.bashrc` for example so when new terminal is open all the variables will load again.
+
+You can alias a command with a token. For example if you do `alias l='ls -alh'` and then type `l` in shell the `ls -alh` would be executed.
 
 ### Shell scripts
 We can write scripts that will be executed by our shell program. The shell scripts start with shebang. For example `#!/bin/sh`.
