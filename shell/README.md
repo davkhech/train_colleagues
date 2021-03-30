@@ -95,7 +95,9 @@ When you install new software and want to run it from shell, you need to add it'
 For example you installed the miniconda and want to use it's python instead of linux's python you need to prepend the minconda python path to `PATH`.
 `export $PATH=$HOME/miniconda3/bin`
 
-When you open new terminal, you'll see that the variables you have set disappeared. To make changes permanent you need to write them in `.bashrc` for example so when new terminal is open all the variables will load again.
+When you open new terminal, you'll see that the variables you have set disappeared. To make changes permanent you need to write them in `~/.bashrc` for example so when new terminal is open all the variables will load again.
+
+If you want to apply `~/.bashrc` current changes to your shell session do `source ~/.bashrc` or `. ~/.bashrc`.
 
 You can alias a command with a token. For example if you do `alias l='ls -alh'` and then type `l` in shell the `ls -alh` would be executed.
 
