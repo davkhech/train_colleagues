@@ -83,7 +83,7 @@ There are environment variables that can be accessed via your shell or the progr
 For example if you do `env | grep USER` you'll see your log in user name.
 You can print the values of your environment variables as well `echo $USER`
 
-You can add enviornment variables by exporting them `export $MY_VAR=42`.
+You can add enviornment variables by exporting them `export MY_VAR=42`.
 
 The variable that shows your user's folder is `HOME` and when you type `cd ~` it looks to `HOME` to know the home folder path.
 
@@ -93,7 +93,7 @@ You can see that it's a string in `path_1:path_2:path_3:...:path_n` format. When
 
 When you install new software and want to run it from shell, you need to add it's binary's directory to `PATH`. `export PATH=$PATH:/path/to/new/binaries`.
 For example you installed the miniconda and want to use it's python instead of linux's python you need to prepend the minconda python path to `PATH`.
-`export $PATH=$HOME/miniconda3/bin`
+`export PATH=$HOME/miniconda3/bin`
 
 When you open new terminal, you'll see that the variables you have set disappeared. To make changes permanent you need to write them in `~/.bashrc` for example so when new terminal is open all the variables will load again.
 
